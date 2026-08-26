@@ -9,17 +9,11 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security
-SECRET_KEY = os.environ.get(
-    "DJANGO_SECRET_KEY",
-    "django-insecure-local-development-key-change-in-production"
-)
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dev-key')
 
-DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
-
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.environ.get("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
-    if host.strip()
+   '*'
 ]
 
 # Application definition
