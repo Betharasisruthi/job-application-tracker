@@ -110,7 +110,7 @@ job-application-tracker/
 
 
 
-\## Live Demo
+
 
 
 
