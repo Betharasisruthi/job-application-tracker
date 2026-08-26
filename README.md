@@ -118,5 +118,5 @@ job-application-tracker/
 
 
 
-\[Job Application Tracker] (https://job-application-tracker-pzlz.onrender.com)
+\[Job Application Tracker](https://job-application-tracker-pzlz.onrender.com)
 
