@@ -1,0 +1,256 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Application Tracker</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Job Application Tracker</h1>
+            <p>Track and manage your job applications in one place.</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Dashboard Statistics -->
+
+        <section class="stats">
+
+            <div class="card">
+                <h3>Total Applications</h3>
+                <p id="total">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Applied</h3>
+                <p id="applied">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Interviews</h3>
+                <p id="interviews">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Offers</h3>
+                <p id="offers">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Application -->
+
+        <section class="form-section">
+
+            <h2>Add Job Application</h2>
+
+            <form id="jobForm">
+
+                <div class="form-group">
+                    <label for="company_name">Company Name</label>
+
+                    <input
+                        type="text"
+                        id="company_name"
+                        placeholder="e.g. TCS"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="job_title">Job Title</label>
+
+                    <input
+                        type="text"
+                        id="job_title"
+                        placeholder="e.g. Python Developer"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="e.g. Bangalore"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="job_url">Job URL</label>
+
+                    <input
+                        type="url"
+                        id="job_url"
+                        placeholder="https://..."
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="application_date">
+                        Application Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="application_date"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+
+                    <select id="status">
+
+                        <option value="Applied">
+                            Applied
+                        </option>
+
+                        <option value="Interview">
+                            Interview
+                        </option>
+
+                        <option value="Assessment">
+                            Assessment
+                        </option>
+
+                        <option value="Rejected">
+                            Rejected
+                        </option>
+
+                        <option value="Offer">
+                            Offer
+                        </option>
+
+                    </select>
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="notes">Notes</label>
+
+                    <textarea
+                        id="notes"
+                        placeholder="Add notes about this application..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        + Add Application
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Applications -->
+
+        <section class="applications-section">
+
+            <div class="applications-header">
+
+                <div>
+                    <h2>My Applications</h2>
+
+                    <p class="section-subtitle">
+                        Manage your job applications
+                    </p>
+                </div>
+
+
+                <div class="filters">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search company or job title..."
+                    >
+
+
+                    <select id="statusFilter">
+
+                        <option value="All">
+                            All Statuses
+                        </option>
+
+                        <option value="Applied">
+                            Applied
+                        </option>
+
+                        <option value="Interview">
+                            Interview
+                        </option>
+
+                        <option value="Assessment">
+                            Assessment
+                        </option>
+
+                        <option value="Rejected">
+                            Rejected
+                        </option>
+
+                        <option value="Offer">
+                            Offer
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div id="jobList"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Job Application Tracker
+        </p>
+
+    </footer>
+
+
+    <script src="{% static 'app.js' %}"></script>
+
+</body>
+
+</html>
