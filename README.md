@@ -94,3 +94,25 @@ job-application-tracker/
 
 └── .gitignore
 
+```
+
+\## API Endpoints
+
+
+
+&#x20;   GET     /api/jobs/
+
+&#x20;   POST    /api/jobs/
+
+&#x20;   PUT     /api/jobs/<id>/
+
+&#x20;   DELETE  /api/jobs/<id>/
+
+
+
+\## Live Demo
+
+
+
+\[Job Application Tracker](https://job-application-tracker-pzlz.onrender.com)
+
